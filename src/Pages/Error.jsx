@@ -15,7 +15,7 @@ export default function Error() {
   }, [navigate]);
 
   return (
-    <div className="error-container">
+    <div className="body2 error-container"><br />
       <h1>Page Not Found</h1>
       <p>Redirecting to the HOME PAGE...</p>
       <div className="spinner"></div>

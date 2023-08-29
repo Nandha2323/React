@@ -33,7 +33,7 @@ class ClassComponent extends Component {
   render() {
     console.log("Render method called");
     return (
-      <div className="centered-container">
+      <div className="text-center body2 ">
         <br />
         <h1>Lifecycle Of Class Component</h1>
         <br />

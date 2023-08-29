@@ -2,10 +2,11 @@ import React from 'react'
 import { useState, useMemo } from 'react';
 
 function EuseMemo() {
-    const [dark,setTheme] = useState("black");
+  const [theme, setTheme] = useState('dark');
+  
   const ChangeTheme = () => { 
-    setTheme((prevTheme) => (prevTheme === 'red' ? 'dark' : prevTheme === 'dark' ? 'light' : 'red'));
-  }
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'white' : 'dark'));
+  };
   const [countt, setCountt] = useState(0);
   const [todos, setTodos] = useState([]);
 
@@ -26,11 +27,13 @@ function EuseMemo() {
   const calculation = useMemo(() => SlowCalculation(countt), [countt]);
 
   return (
-    <div className="row border border-primary border-3">
-        <div className={`${dark}-theme`}>
-          <h2>UseMemo</h2>
-          <button onClick={ChangeTheme}>ChangeTHEME</button>
-          <p>Current Theme: {dark}</p>
+
+    <div className='body2 text-center'><br />
+      <div className={`w-50 m-auto border  border-5 ${theme}-theme`}>
+        <div ><br />
+          <h2>UseMemo</h2><br />
+          <button onClick={ChangeTheme}>ChangeTHEME</button><br /><br />
+          <p>Current Theme: {theme}</p>
           {todos.map((todo, index) => {
             return <p key={index}>{todo}</p>;
           })}
@@ -45,7 +48,9 @@ function EuseMemo() {
           <h3>{calculation}</h3>
         </div>
       </div>
+    </div>
   )
 }
 
 export default EuseMemo
+

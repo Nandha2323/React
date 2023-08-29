@@ -153,7 +153,7 @@ const Wizard = () => {
   };
 
   return (
-    <div className="container main">
+    <div className="body2 pt-3">
       <h1 className="text-center fw-bold">Wizard Form</h1>
       <div className="container d-flex justify-content-center">
         <form onSubmit={handleSubmit} className="forms-final" >

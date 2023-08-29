@@ -1,6 +1,5 @@
 
 import { createSlice } from '@reduxjs/toolkit';
-
 const counterSlice = createSlice({
   
   name: 'counter',
@@ -17,8 +16,8 @@ const counterSlice = createSlice({
       console.log("we are in reducer");
     },
     reset: state => {
-      state.value = 0;
       console.log("we are in reducer");
+      state.value = 10; // Reset the counter value to 0
     }
   },
 });

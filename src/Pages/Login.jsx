@@ -13,7 +13,7 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Perform authentication logic here
-    if (user === "admin" && password === "admin") {
+    if (user === "user" && password === "user") {
       handleLogin(); // Proceed to login if credentials are correct
     } else {
       setError("Invalid username or password !!"); // Set an error message

@@ -109,7 +109,7 @@ export default function BasicTable({ data, columns }) {
 
   return (
 
-    <div className="container">
+    <div className="container ">
       <div className="mb-3">
         <input 
           type="text"
@@ -123,7 +123,7 @@ export default function BasicTable({ data, columns }) {
         />
 
       </div>
-      <table className="table">
+      <table className="table text-center">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>

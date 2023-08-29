@@ -12,11 +12,11 @@ export default function NavBar() {
     navigate("/login");
   };
   return (
-    <div className="sticky-top">
-      <nav className="navbar navbar-expand-lg   bg-info  py-2">
+    <div className="sticky-top h-100 ">
+      <nav className="navbar navbar-expand-lg  bg-info  py-2">
         <div className="container">
           <div>
-            <NavLink className="navbar-brand mx-auto" href="#">
+            <NavLink className="navbar-brand mx-auto" to="/">
               <img
                 src="https://cdn.iconscout.com/icon/free/png-256/free-react-1-282599.png?f=webp"
                 alt="React Logo"
@@ -43,7 +43,7 @@ export default function NavBar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="dropdown">
+          <div className="collapse navbar-collapse text-center" id="dropdown">
             <ul className="navbar-nav set mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink className="nav-link  " to="/">

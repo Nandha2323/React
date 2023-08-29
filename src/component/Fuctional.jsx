@@ -20,7 +20,7 @@ function FunctionalComponent(props) {
   }, [count]);
 
   return (
-    <div className="centered-container">
+    <div className="text-center body2">
         <br />
         <h1>Lifecycle Of Functional Component</h1>
         <br />

@@ -115,12 +115,16 @@ const BasicTable2 = ({ columns }) => {
         <div className="text-center m-5 loading">Loading...</div>
       ) : (
         <>
-          <input
-            type="text"
-            value={filtering}
-            onChange={(e) => setFiltering(e.target.value)}
-          />
-          <table className="table">
+          <div className="mb-3">
+            <input
+              placeholder="Search by Name..."
+              className="form-control w-25 shadow border  border-2"
+              type="text"
+              value={filtering}
+              onChange={(e) => setFiltering(e.target.value)}
+            />
+          </div>
+          <table className="table text-center">
             <thead>
               {table.getHeaderGroups().map((headerGroup) => (
                 <tr key={headerGroup.id}>

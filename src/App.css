@@ -4,18 +4,6 @@
   padding: 0;
   font-family: "work sans";
 }
-.main{
-  height: 100vh;
-  width: 0vw;
-  
-}
-/* Center the form container */
-.container.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
 
 /* Add border and background color to the form */
 .forms-final {
@@ -98,19 +86,26 @@ pre {
 .set li{
   position: relative;
 }
+.set li .nav-link::after{
+  content: ' ';
+  display: block;
+  height: 2px;
+}
+
 .set li .nav-link:hover,.set li .nav-link.active{
-  color: #f91212;
+  color:red;
 }
 .set li .nav-link:hover::after,.set li .nav-link.active::after{
   content: ' ';
   display: block;
   background-color: red;
   height: 2px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.6s ease-in-out;
   transform:scaleX(0);
 }
 .set li .nav-link:hover,.set li .nav-link.active::after{
   transform:scaleX(1);
+  
 }
 
 
@@ -131,6 +126,15 @@ pre {
   height: 90vh;
   display: flex;
   align-items: center;
+}
+.body2{
+  height: 90.8vh;
+  background: rgb(34,193,195);
+  background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+}
+.body3{
+  background: rgb(34,193,195);
+  background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
 }
 .login {
   
@@ -195,7 +199,7 @@ pre {
 
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #3498db;
+  border-top: 4px solid #0c3754;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -222,12 +226,6 @@ pre {
 text-align: center;
 }
 /* Counter.css */
-.counter-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-}
 
 button {
   background-color: #007bff;
@@ -244,22 +242,6 @@ button {
 }
 
 /* Table.css */
-.table-container {
-  margin: 20px;
-  padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.fw-bold {
-  font-weight: bold;
-}
-
 .loading {
   color: #007bff;
 }
@@ -281,4 +263,17 @@ button {
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
+}
+
+/* useReducer */
+/* Styles for the green theme */
+.white-theme {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+/* Styles for the dark theme */
+.dark-theme {
+  background-color: darkgray;
+  color: white;
 }

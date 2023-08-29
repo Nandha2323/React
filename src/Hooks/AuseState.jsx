@@ -16,39 +16,40 @@ function AuseState() {
     $("#Email").val("");
   };
   return (
-    <div className="row border border-primary border-3">
-      <div className=" border border-primary border-3">
-        <h1>Using useState in FunctionalComponent</h1>
-        <form action="" onSubmit={handleFunction}>
-          <fieldset>
-            <legend>form</legend>
+    <div className="text-center body2"><br />
+        <h1 className="">Using UseState</h1><br />
+        <form  onSubmit={handleFunction} className=" w-50 m-auto  border border-5 ">
+          <fieldset >
+            <legend className=" fw-bolder">Form</legend>
             <div>
-              <label htmlFor="Email">Name</label>
+              <label htmlFor="Email">Name: </label>
               <input
+               className="w-50"
                 type="text"
                 id="Name"
                 placeholder="Enter Your Name"
                 onChange={(ev) => setName(ev.target.value)}
               />
-            </div>
+            </div><br />
             <div>
-              <label htmlFor="Email">Email</label>
+              <label htmlFor="Email">Email: </label>
               <input
+              className="w-50"
                 type="email"
                 id="Email"
                 name="Email"
                 placeholder="Enter Your Email"
                 onChange={(ev) => setEmail(ev.target.value)}
-              />
-            </div>
-          </fieldset>
-          <button type="submit">Submit</button>
-        </form>
-        <div>
-          <p>Name:{ValueName}</p>
-          <p>Email:{ValueEmail}</p>
+              /> 
+            </div><br />
+          </fieldset><br />
+          <button type="submit">Submit</button><br /><br />
+        </form><br />
+        <div className="border border-5 m-auto w-50 ">
+          <p className="fw-bolder fs-3 ">Name:{ValueName}</p>
+          <p className="fw-bolder fs-3 ">Email:{ValueEmail}</p>
         </div>
-      </div>
+      
     </div>
   );
 }

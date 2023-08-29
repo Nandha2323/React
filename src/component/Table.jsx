@@ -81,7 +81,7 @@ function Table() {
   const currentPageData = isLastPage ? lastPageData.slice(-10) : lastPageData;
 
   return (
-    <div className="table-container">
+    <div className="body3"><br />
       <h1 className="text-center fw-bold">Using Only TanStack Table</h1>
       <br />
       {isLoading ? (

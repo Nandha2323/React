@@ -30,13 +30,13 @@ function Routing() {
       <Routes>
         {/* PUBLIC ROUTES */}
         <Route element={<Publicroutes />}>
-          <Route element={<Login />} path="/login" />
+          <Route  path="/login" element={<Login />} />
+         
         </Route>
 
         {/* PRIVATE ROUTES */}
         <Route element={<Privateroute />}>
           <Route path="/"            element={<Home />}/>
-          <Route path="*"            element={<Error />}  />
           {/* LifeCycle */}
           <Route path="/class"       element={<ClassComponent />} />
           <Route path="/functional"  element={<FunctionalComponent />} />
@@ -57,6 +57,7 @@ function Routing() {
           {/* Redux */}
           <Route path="/redux"       element={<Counter />} />
         </Route>
+        <Route path="*"              element={<Error />}  />
       </Routes>
     </div>
   );

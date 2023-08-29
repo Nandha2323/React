@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './Reducers/counterSlice';
+import counterReducer,{reset} from './Reducers/counterSlice';
 import logger from "redux-logger";
+
 // Your custom middleware
 const middleware1 = (store) => (next) => (action) => {
 
   const currentState = store.getState().counter.value; 
+
   if (currentState >= 19) {
     return console.log("Store is exceeded");
   }
@@ -13,18 +15,20 @@ const middleware1 = (store) => (next) => (action) => {
 };
 
 // Define the initial state
-const preloadedState = {
+ let preloadedState = {
   counter: {
     value: 10 // You can set any initial value you want
   }
 };
+
 const simpleEnhancer = (createstore) => (reducer, preloadedState, enhancer) => {
   const store = createstore(reducer, preloadedState, enhancer);
 
   const enhancedStore = {
     ...store,
     resetCounter: () => {
-      store.dispatch({ type: 'RESET' });
+      console.log("we are in enhancer");
+      store.dispatch(reset());
     }
   };
 
@@ -40,5 +44,6 @@ export default configureStore({
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(middleware1,logger),
   devTools: process.env.NODE_ENV !== 'production',
   preloadedState, 
-  enhancers: [simpleEnhancer]
+  enhancers: [simpleEnhancer],
 });
+

@@ -27,7 +27,7 @@ const Columns = [
   
   return (
     <QueryClientProvider client={queryClient}>
-    <div className="table-container">
+    <div className="body3  "><br />
       <h1 className="text-center fw-bold">Using TanStack Query</h1>
       <br />
       <BasicTable2 columns={Columns}/>

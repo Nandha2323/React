@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 function BuseEffect() {
   const [count, setCount] = useState(0);
@@ -10,21 +10,22 @@ function BuseEffect() {
   }, [add]);
 
   return (
-    <div className=" border border-primary border-3">
-      <h1>Functional Component</h1>
-      <h2>useEffect</h2>
-      <div className="box">
-        <h3>{count}</h3>
-        <p>No Dependency</p>
-        <button onClick={() => setCount(count + 1)}>ADD</button>
+    <div className="body2 pt-5">
+      <div className=" text-center w-50 m-auto border  border-5 ">
+        <h2 className=" fw-bolder p-3">Using UseEffect</h2>
+        <div className="box w-50 m-auto border  border-5 ">
+          <h3>{count}</h3>
+          <p>No Dependency</p>
+          <button onClick={() => setCount(count + 1)}>ADD</button><br /><br />
+        </div><br />
+        <div className="box  w-50 m-auto border  border-5">
+          <h3>{add}</h3>
+          <p>Selective Dependency and see title will Also Render</p>
+          <button onClick={() => setAdd(add + 1)}>ADD</button><br /><br />
+        </div>
+        <br />
+        <br />
       </div>
-      <div className="box">
-        <h3>{add}</h3>
-        <p>Selective Dependency</p>
-        <button onClick={() => setAdd(add + 1)}>ADD</button>
-      </div>
-      <br />
-      <br />
     </div>
   );
 }
