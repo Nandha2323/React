@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import HOC from "../HOC/HOC";
 
 class ClassComponent extends Component {
    
@@ -47,4 +48,4 @@ class ClassComponent extends Component {
   }
 }
 
-export default ClassComponent;
+export default HOC(ClassComponent);

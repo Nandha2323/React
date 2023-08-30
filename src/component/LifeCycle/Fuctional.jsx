@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import HOC from '../HOC/HOC';
 
 function FunctionalComponent(props) {
   const [count, setCount] = useState(0);
@@ -36,4 +37,4 @@ function FunctionalComponent(props) {
   );
 }
 
-export default FunctionalComponent;
+export default HOC(FunctionalComponent);
