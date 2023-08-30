@@ -23,7 +23,7 @@ function Login() {
   const handleLogin = () => {
     const res = {
       data: {
-        token: "login", // Mock token value
+        token: "LoginSuccess", // Mock token value
       },
     };
     const token = res.data.token; //let's take some string 'dev' as token

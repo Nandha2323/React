@@ -1,17 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Wizard from "./Wizard";
-import Table from "./Table";
-import Query from "./Query";
-import Forms from "./Form";
+import Wizard from "./final-Form&Select/Wizard";
+import Table from "./TanStack Table/Table";
+import Query from "./Tanstack Query/Query";
+import Forms from "./final-Form&Select/Form";
 import Error from "../Pages/Error";
 import Home from "../Pages/Home";
 import NavBar from "../Pages/Navbar";
 import Privateroute from "../ProtectedRoutes/privateroute";
 import Publicroutes from "../ProtectedRoutes/Publicroutes";
 import Login from "../Pages/Login";
-import ClassComponent from "./Class";
-import FunctionalComponent from "./Fuctional";
+import ClassComponent from "./LifeCycle/Class";
+import FunctionalComponent from "./LifeCycle/Fuctional";
 import AuseState from "../Hooks/AuseState";
 import BuseEffect from "../Hooks/BuseEffect";
 import CuseContext from "../Hooks/CuseContext";
@@ -25,15 +25,14 @@ import Counter from "../Redux/displayRedux/Counter";
 function Routing() {
   return (
     <div>
-      <NavBar />
-      
+     
+     <NavBar />
       <Routes>
         {/* PUBLIC ROUTES */}
         <Route element={<Publicroutes />}>
           <Route  path="/login" element={<Login />} />
-         
         </Route>
-
+      
         {/* PRIVATE ROUTES */}
         <Route element={<Privateroute />}>
           <Route path="/"            element={<Home />}/>
@@ -57,6 +56,7 @@ function Routing() {
           {/* Redux */}
           <Route path="/redux"       element={<Counter />} />
         </Route>
+        {/* Error Page */}
         <Route path="*"              element={<Error />}  />
       </Routes>
     </div>

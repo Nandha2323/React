@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import BasicTable from "../component/BasicTable"; // Adjust the path as needed
+import BasicTable from "./BasicTable"; // Adjust the path as needed
 
 function Table() {
   const itemsPerPage = 10;
