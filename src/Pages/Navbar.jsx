@@ -7,7 +7,6 @@ export default function NavBar() {
   const handleLogout = () => {
     // Clear authentication token from local storage
     localStorage.removeItem("token");
-
     // Navigate to the login page
     navigate("/login");
   };
@@ -183,7 +182,7 @@ export default function NavBar() {
                 Query
               </NavLink>
 
-              <NavLink to="/login">
+              <NavLink >
                 <button
                   className="btn btn-outline-dark me-2 "
                   onClick={handleLogout}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import HOC from '../HOC/HOC';
 
-function FunctionalComponent(props) {
+function FunctionalComponent() {
   const [count, setCount] = useState(0);
   const state = useSelector((state) => state.counter.value);
 
@@ -22,7 +22,8 @@ function FunctionalComponent(props) {
 
   return (
     <div className="text-center body2">
-        <br />
+      <div className='border border-5 w-50 m-auto'>
+      <br />
         <h1>Lifecycle Of Functional Component</h1>
         <br />
         <h1>Count: {count}</h1>
@@ -32,6 +33,8 @@ function FunctionalComponent(props) {
         </div>
       
      
+      </div>
+       
      
     </div>
   );

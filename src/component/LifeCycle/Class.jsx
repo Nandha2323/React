@@ -34,7 +34,9 @@ class ClassComponent extends Component {
   render() {
     console.log("Render method called");
     return (
+
       <div className="text-center body2 ">
+        <div className="border border-5 w-50 m-auto">
         <br />
         <h1>Lifecycle Of Class Component</h1>
         <br />
@@ -43,6 +45,8 @@ class ClassComponent extends Component {
         <div>
           <button onClick={this.incrementCount}>Increment</button>
         </div>
+        </div>
+        
       </div>
     );
   }

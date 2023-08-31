@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Form, Field, FormSpy } from "react-final-form";
-// import Select from "react-select";
 import AsyncSelect from "react-select/async";
 import CreatableSelect from "react-select/creatable";
+import axios from "axios";
 
 export default function Forms() {
   const [selectedState, setSelectedState] = useState(null);
@@ -20,11 +20,11 @@ export default function Forms() {
   const loadOptions = (inputValue, callback) => {
     console.log("loadOptions called");
     setTimeout(() => {
-      // Fetch data from the API endpoint
-      fetch(
+      // Fetch data from the axios Library
+      axios.get(
         "https://raw.githubusercontent.com/nshntarora/Indian-Cities-JSON/master/cities.json"
       )
-        .then((response) => response.json())
+        .then((response) => response.data)
         .then((data) => {
           // Filter the data based on the inputValue
           const filteredData = data.filter((city) =>

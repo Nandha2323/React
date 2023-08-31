@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,useLocation } from "react-router-dom";
 import Wizard from "./final-Form&Select/Wizard";
 import Table from "./TanStack Table/Table";
 import Query from "./Tanstack Query/Query";
@@ -23,10 +23,13 @@ import Counter from "../Redux/displayRedux/Counter";
 
 
 function Routing() {
+  const location = useLocation();
+  // Check if the current location is "/login"
+  const isLoginPage = location.pathname === "/login";
   return (
     <div>
      
-     <NavBar />
+     {!isLoginPage && <NavBar />}
       <Routes>
         {/* PUBLIC ROUTES */}
         <Route element={<Publicroutes />}>
