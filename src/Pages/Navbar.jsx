@@ -173,11 +173,50 @@ export default function NavBar() {
                   Redux
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link "
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  to="/ff"
+                >
+                 Table
+                </NavLink>
+                <ul
+                  className="dropdown-menu bg-info"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold "
+                      to="/table"
+                    >
+                    Table
+                    </NavLink>
+                  </li>
+
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold"
+                      to="/grouping"
+                    >
+                     Grouping
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold"
+                      to="/virtualize"
+                    >
+                     Virtualize
+                    </NavLink>
+                  </li>
+                </ul>
+              </li>
             </ul>
             <div className="buttons nn">
-              <NavLink to="/table" className="btn btn-outline-dark me-2 ">
-                Table
-              </NavLink>
               <NavLink to="/query" className="btn btn-outline-dark me-2 ">
                 Query
               </NavLink>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@faker-js/faker": "^8.0.2",
     "@reduxjs/toolkit": "^1.9.5",
     "@tanstack/react-query": "^4.32.6",
     "@tanstack/react-query-devtools": "^4.32.6",
@@ -26,6 +27,7 @@
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.4",
+    "react-virtual": "^2.10.4",
     "redux": "^4.2.1",
     "redux-batched-subscribe": "^0.1.6",
     "redux-logger": "^3.0.6",

@@ -4,7 +4,7 @@ import HOC from '../HOC/HOC';
 
 function FunctionalComponent() {
   const [count, setCount] = useState(0);
-  const state = useSelector((state) => state.counter.value);
+  const state = useSelector((state) => state.counter.value);                                                      
 
   // Equivalent of componentDidMount
   useEffect(() => {

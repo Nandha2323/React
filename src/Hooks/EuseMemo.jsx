@@ -24,7 +24,9 @@ function EuseMemo() {
     }
     return num ;
   };
-  const calculation = useMemo(() => SlowCalculation(countt), [countt]);
+  const calculation = useMemo(
+    () => SlowCalculation(countt)
+  , [countt]);
 
   return (
 

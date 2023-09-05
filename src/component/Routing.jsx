@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route,useLocation } from "react-router-dom";
 import Wizard from "./final-Form&Select/Wizard";
 import Table from "./TanStack Table/Table";
-import Query from "./Tanstack Query/Query";
 import Forms from "./final-Form&Select/Form";
 import Error from "../Pages/Error";
 import Home from "../Pages/Home";
@@ -20,6 +19,9 @@ import EuseMemo from "../Hooks/EuseMemo";
 import FuseReducer from "../Hooks/FuseReducer";
 import GuseCallback from "../Hooks/GuseCallback";
 import Counter from "../Redux/displayRedux/Counter";
+import GroupingData from "./TanStack Table/Grouping";
+import Virtualize from "./TanStack Table/Virtualize";
+import Query from "./Tanstack Query/Query";
 
 
 function Routing() {
@@ -55,6 +57,8 @@ function Routing() {
           <Route path="/wizard"      element={<Wizard />} />
           {/* TanStack */}
           <Route path="/table"       element={<Table />} />
+          <Route path="/grouping"       element={<GroupingData/>} />
+          <Route path="/virtualize"       element={<Virtualize />} />
           <Route path="/query"       element={<Query />} />
           {/* Redux */}
           <Route path="/redux"       element={<Counter />} />

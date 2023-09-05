@@ -1,6 +1,4 @@
 import React from "react";
-import Welcome from "../component/HOC/Welcome";
-import Counter from "../Redux/displayRedux/Counter";
 
 function Home() {
    
@@ -8,10 +6,9 @@ function Home() {
     <div className="body2 text-center">
       <br />
       <div>
-        <h1> Working on HOC </h1>
+        <h1> Working on TanStack Table </h1>
         <br />
-        <Welcome name="Nandha" />
-        <Counter/>
+        
       </div>
     </div>
   );
