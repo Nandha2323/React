@@ -132,7 +132,7 @@ const Query = () => {
       <h1 className="text-center">Using Query</h1><br />
       <div className="container">
         {isLoading ? (
-          <div className="text-center m-5 loading">Loading...</div>
+          <div className="text-center m-5  loading">Loading...</div>
         ) : (
           <>
             <div className="mb-3">

@@ -166,8 +166,7 @@ export default function NavBar() {
                   Wizard
                 </NavLink>
               </li>
-              
-             
+
               <li className="nav-item">
                 <NavLink className="nav-link" to="/redux">
                   Redux
@@ -182,7 +181,7 @@ export default function NavBar() {
                   aria-expanded="false"
                   to="/ff"
                 >
-                 Table
+                  Table
                 </NavLink>
                 <ul
                   className="dropdown-menu bg-info"
@@ -193,7 +192,7 @@ export default function NavBar() {
                       className="nav-link text-center fw-bold "
                       to="/table"
                     >
-                    Table
+                      Table
                     </NavLink>
                   </li>
 
@@ -202,7 +201,7 @@ export default function NavBar() {
                       className="nav-link text-center fw-bold"
                       to="/grouping"
                     >
-                     Grouping
+                      Grouping
                     </NavLink>
                   </li>
                   <li>
@@ -210,18 +209,48 @@ export default function NavBar() {
                       className="nav-link text-center fw-bold"
                       to="/virtualize"
                     >
-                     Virtualize
+                      Virtualize
+                    </NavLink>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link "
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  to="/ff"
+                >
+                  Query
+                </NavLink>
+                <ul
+                  className="dropdown-menu bg-info"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold "
+                      to="/query"
+                    >
+                      Query
+                    </NavLink>
+                  </li>
+
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold"
+                      to="/groupingdata"
+                    >
+                      GroupingData
                     </NavLink>
                   </li>
                 </ul>
               </li>
             </ul>
             <div className="buttons nn">
-              <NavLink to="/query" className="btn btn-outline-dark me-2 ">
-                Query
-              </NavLink>
-
-              <NavLink >
+              <NavLink>
                 <button
                   className="btn btn-outline-dark me-2 "
                   onClick={handleLogout}

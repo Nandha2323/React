@@ -7,8 +7,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div>
-        <Routing />
-    
+        <Routing/>
       </div>
     </QueryClientProvider>
   );

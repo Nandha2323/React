@@ -42,12 +42,12 @@ function Virtualize() {
         size: 60,
       },
       {
-        accessorKey: "firstName",
+        accessorKey: "firstname",
         cell: (info) => info.getValue(),
       },
       {
-        accessorFn: (row) => row.lastName,
-        id: "lastName",
+        accessorFn: (row) => row.lastname,
+        id: "lastname",
         cell: (info) => info.getValue(),
         header: () => <span>Last Name</span>,
       },

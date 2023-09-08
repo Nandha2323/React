@@ -1,14 +1,14 @@
 import React from "react";
+import GroupingData from "../component/Tanstack Query/GroupingData";
 
 function Home() {
    
   return (
-    <div className="body2 text-center">
+    <div className="body3 ">
       <br />
       <div>
-        <h1> Working on TanStack Table </h1>
-        <br />
-        
+        <GroupingData/>
+        <br/>
       </div>
     </div>
   );

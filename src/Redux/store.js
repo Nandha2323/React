@@ -38,7 +38,7 @@ const simpleEnhancer = (createstore) => (reducer, preloadedState, enhancer) => {
 
 export default configureStore({
   reducer: {
-    counter: counterReducer
+    counter: counterReducer,
   },
   middleware :[middleware1,logger],
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(middleware1,logger),

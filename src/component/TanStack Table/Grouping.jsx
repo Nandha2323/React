@@ -24,14 +24,14 @@ function GroupingData() {
         header: "Name",
         columns: [
           {
-            accessorKey: "firstName",
-            header: "FirstName",
+            accessorKey: "firstname",
+            header: "Firstname",
             cell: (info) => info.getValue(),
             getGroupingValue: (row) => `${row.firstName} ${row.lastName}`,
           },
           {
-            accessorFn: (row) => row.lastName,
-            id: "lastName",
+            accessorFn: (row) => row.lastname,
+            id: "lastname",
             header: () => <span>LastName</span>,
             cell: (info) => info.getValue(),
           },
@@ -77,9 +77,16 @@ function GroupingData() {
     ],
     []
   );
-
+  const [isLoading, setIsLoading] = useState(false); // State to track loading
   const [data, setData] = useState(() => studentsJson);
-  const refreshData = () => setData(() => studentsJson);
+  const refreshData = () => {
+    setIsLoading(true); // Set loading state to true
+    // Simulate loading with a delay (you can replace this with your actual data fetching)
+    setTimeout(() => {
+      setData(studentsJson);
+      setIsLoading(false); // Set loading state to false when data is loaded
+    }, 2000); // Adjust the delay as needed
+  };
 
   const [grouping, setGrouping] = useState([]);
 
@@ -103,6 +110,12 @@ function GroupingData() {
       <h1>Using Grouping</h1>
       <br />
       <div className="container">
+      {isLoading && (
+            <div className="spinner">
+                <span className=" sr-only"></span>
+            </div>
+          )}
+         {!isLoading && (
         <table className="table table-hover table-responsive">
           <thead className="text-center">
             {table.getHeaderGroups().map((headerGroup) => (
@@ -265,6 +278,7 @@ function GroupingData() {
             </tr>
           </tfoot>
         </table>
+         )}
         <br />
         <div>{table.getRowModel().rows.length} Rows</div>
         <div>
@@ -272,9 +286,11 @@ function GroupingData() {
         </div>
         <br />
         <div>
+       
           <button onClick={() => refreshData()}>Refresh Data</button>
-        </div>
-      </div>
+        
+        </div><br />
+      </div><br /><br />
     </div>
   );
 }

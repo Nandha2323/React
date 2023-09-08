@@ -19,9 +19,10 @@ import EuseMemo from "../Hooks/EuseMemo";
 import FuseReducer from "../Hooks/FuseReducer";
 import GuseCallback from "../Hooks/GuseCallback";
 import Counter from "../Redux/displayRedux/Counter";
-import GroupingData from "./TanStack Table/Grouping";
+import Grouping from "./TanStack Table/Grouping";
 import Virtualize from "./TanStack Table/Virtualize";
 import Query from "./Tanstack Query/Query";
+import GroupingData from "./Tanstack Query/GroupingData";
 
 
 function Routing() {
@@ -57,9 +58,10 @@ function Routing() {
           <Route path="/wizard"      element={<Wizard />} />
           {/* TanStack */}
           <Route path="/table"       element={<Table />} />
-          <Route path="/grouping"       element={<GroupingData/>} />
+          <Route path="/grouping"       element={<Grouping/>} />
           <Route path="/virtualize"       element={<Virtualize />} />
           <Route path="/query"       element={<Query />} />
+          <Route path="/groupingdata"       element={<GroupingData />} />
           {/* Redux */}
           <Route path="/redux"       element={<Counter />} />
         </Route>

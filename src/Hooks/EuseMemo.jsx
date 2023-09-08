@@ -54,5 +54,5 @@ function EuseMemo() {
   )
 }
 
-export default EuseMemo
+export default EuseMemo;
 
