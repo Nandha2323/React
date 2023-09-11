@@ -17,7 +17,7 @@ const counterSlice = createSlice({
     },
     reset: state => {
       console.log("we are in reducer");
-      state.value = 10; // Reset the counter value to 0
+      state.value = 10; 
     }
   },
 });

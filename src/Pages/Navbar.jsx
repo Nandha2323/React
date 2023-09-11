@@ -246,6 +246,14 @@ export default function NavBar() {
                       GroupingData
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold"
+                      to="/pokemon"
+                    >
+                      Pokemon(RTQ)
+                    </NavLink>
+                  </li>
                 </ul>
               </li>
             </ul>

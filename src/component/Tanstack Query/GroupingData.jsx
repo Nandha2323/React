@@ -131,8 +131,10 @@ function GroupingData() {
                                 }}
                               >
                                 {header.column.getIsGrouped()
+                                
                                   ? `🛑(${header.column.getGroupedIndex()}) `
                                   : `👊 `}
+                                 
                               </button>
                             ) : null}
                             {flexRender(
@@ -143,7 +145,7 @@ function GroupingData() {
                               <input
                                 placeholder="Search"
                                 type="text"
-                                className="form-control"
+                                className="form-control w-100"
                                 onChange={(e) =>
                                   header.column.setFilterValue(e.target.value)
                                 }
@@ -238,6 +240,10 @@ function GroupingData() {
           >
             {"Previous Page"}
           </button>
+          <button   className="btn btn-danger m-1">
+            Page ({table.getState().pagination.pageIndex + 1} of{" "}
+            {table.getPageCount()})
+          </button>
           <button
             className="btn btn-primary m-1"
             onClick={() => table.nextPage()}
@@ -245,6 +251,7 @@ function GroupingData() {
           >
             {"Next Page"}
           </button>
+          
           <button
             className="btn btn-primary m-1"
             disabled={
@@ -258,12 +265,7 @@ function GroupingData() {
         {/* <div className="text-center fw-bold fs-4">
           ({table.getRowModel().rows.length} Rows)
         </div> */}
-        <div className="text-center fw-bold fs-4">
-          <strong>
-            {table.getState().pagination.pageIndex + 1} of{" "}
-            {table.getPageCount()}
-          </strong>
-        </div>
+        
       </div>
     </div>
   );

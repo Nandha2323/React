@@ -23,6 +23,7 @@ import Grouping from "./TanStack Table/Grouping";
 import Virtualize from "./TanStack Table/Virtualize";
 import Query from "./Tanstack Query/Query";
 import GroupingData from "./Tanstack Query/GroupingData";
+import Pokemon from "../Redux/displayRedux/pokemon";
 
 
 function Routing() {
@@ -62,6 +63,7 @@ function Routing() {
           <Route path="/virtualize"       element={<Virtualize />} />
           <Route path="/query"       element={<Query />} />
           <Route path="/groupingdata"       element={<GroupingData />} />
+          <Route path="/pokemon"       element={<Pokemon />} />
           {/* Redux */}
           <Route path="/redux"       element={<Counter />} />
         </Route>

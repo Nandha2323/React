@@ -1,13 +1,13 @@
 import React from "react";
-import GroupingData from "../component/Tanstack Query/GroupingData";
+import Pokemon from "../Redux/displayRedux/pokemon";
 
 function Home() {
    
   return (
-    <div className="body3 ">
+    <div className="body2  ">
       <br />
       <div>
-        <GroupingData/>
+        <Pokemon/>
         <br/>
       </div>
     </div>

@@ -356,3 +356,18 @@ button {
   margin-top: 10px;
   font-weight: bold;
 }
+
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px; /* Adjust the padding as needed */
+  text-align: left;
+  border-bottom: 1px solid #ddd;}
+  
