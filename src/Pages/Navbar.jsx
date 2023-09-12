@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 export default function NavBar() {
-  const navigate = useNavigate();
-
+  const navigate = useNavigate()
+  
   const handleLogout = () => {
     // Clear authentication token from local storage
     localStorage.removeItem("token");
@@ -168,9 +168,46 @@ export default function NavBar() {
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/redux">
+              <NavLink
+                  className="nav-link "
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  to="/ff"
+                >
                   Redux
                 </NavLink>
+                <ul
+                  className="dropdown-menu bg-info"
+                  aria-labelledby="navbarScrollingDropdown"
+                >
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold "
+                      to="/table"
+                    >
+                      Basic
+                    </NavLink>
+                  </li>
+
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold"
+                      to="/pokemon"
+                    >
+                      Pokemon(RTQ)
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className="nav-link text-center fw-bold"
+                      to="/todoSlice"
+                    >
+                      TodoList(Thunk)
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <NavLink
@@ -244,14 +281,6 @@ export default function NavBar() {
                       to="/groupingdata"
                     >
                       GroupingData
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      className="nav-link text-center fw-bold"
-                      to="/pokemon"
-                    >
-                      Pokemon(RTQ)
                     </NavLink>
                   </li>
                 </ul>

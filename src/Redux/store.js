@@ -6,12 +6,14 @@ import { pokemonApi } from "./Reducers/PokemonQuery";
 import thunk from "redux-thunk";
 import { batchedSubscribe } from "redux-batched-subscribe";
 import _ from "lodash"; 
+
+import todoSlice from "./Reducers/todoSlice";
 //  custom middleware
 const middleware1 = (store) => (next) => (action) => {
   const currentState = store.getState().counter.value;
 
-  if (currentState >= 19) {
-     console.log("Store is exceeded click reset Work again ");
+  if (currentState >= 19 || currentState <= 2) {
+     console.log("Store is exceeded click reset to Work again ");
      return next(reset);
   }
   console.log("currentState:", currentState);
@@ -47,6 +49,7 @@ const store = configureStore({
   reducer: {
     counter: counterReducer,
     [pokemonApi.reducerPath]: pokemonApi.reducer,
+    todo: todoSlice,
   },
   middleware: [...customMiddleware, middleware1, thunk],
   devTools: process.env.NODE_ENV !== "production",

@@ -22,7 +22,7 @@ import {useGetPokemonByNameQuery,useGetAllPokemonByNameQuery,useGetPokemonImageB
         </div>
         <div className="row ">
           {speciesData.results.map((species) => (
-            <div key={species.name} className="col-3 border border-3 text-center">
+            <div key={species.name} className="col-3                                                                                                                                                                                                 border border-3 text-center">
               <PokemonSpecies name={species.name} />
             </div>
           ))}

@@ -1,14 +1,13 @@
 import React from "react";
-import Pokemon from "../Redux/displayRedux/pokemon";
-
+import TodoList from "../Redux/displayRedux/TodoList";
 function Home() {
    
   return (
-    <div className="body2  ">
+    <div className="body3  ">
       <br />
       <div>
-        <Pokemon/>
         <br/>
+        <TodoList/>
       </div>
     </div>
   );
