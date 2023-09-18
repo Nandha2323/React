@@ -1,33 +1,34 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
-export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
-  const response = await axios.get('https://jsonplaceholder.typicode.com/todos?_page=1&_limt=10');
-  return response.data;
-});
+import { fetchTodos } from '../displayRedux/TodoList';
 
-const todoSlice = createSlice({
-  name: 'todo',
-  initialState: {
-    todos: [],
-    loading: 'idle',
-    error: null,
-  },
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchTodos.pending, (state) => {
-        state.loading = 'loading';
-      })
-      .addCase(fetchTodos.fulfilled, (state, action) => {
-        state.loading = 'succeeded';
-        state.todos = action.payload;
-      })
-      .addCase(fetchTodos.rejected, (state, action) => {
-        state.loading = 'failed';
-        state.error = action.error.message;
-      });
-  },
-});
+const initialState = {
+  todos: [],
+  loading: 'idle',
+  error: null,
+}
 
-export default todoSlice.reducer;
+const todoReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case fetchTodos.pending.type:
+      return {
+        ...state,
+        loading: 'loading',
+      };
+    case fetchTodos.fulfilled.type:
+      return {
+        ...state,
+        loading: 'succeeded',
+        todos: action.payload,
+      };
+    case fetchTodos.rejected.type:
+      return {
+        ...state,
+        loading: 'failed',
+        error: action.error.message,
+      }; 
+    default:
+      return state;
+  }
+};
+
+export default todoReducer;

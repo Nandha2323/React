@@ -378,7 +378,7 @@ th, td {
   width: 900px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f4f4f4;
+  background-color: #f4f4f4d9;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -404,3 +404,41 @@ th, td {
   font-size: 16px;
   margin-bottom: 10px;
 }
+
+
+.todo-table th, .todo-table td {
+  border: 1px solid #ccc; 
+  padding: 8px; 
+  text-align: center; 
+}
+
+.todo-table th {
+  background-color: #70a770; 
+  font-weight: bold; 
+}
+
+
+.todo-table tr {
+  background-color: #fffcfc; 
+}
+
+/* Highlight on hover (optional) */
+.todo-table tr:hover {
+  background-color: #e0e0e0; 
+}
+/* Accordion.css */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion-container {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+

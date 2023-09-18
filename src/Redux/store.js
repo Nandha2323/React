@@ -6,7 +6,6 @@ import { pokemonApi } from "./Reducers/PokemonQuery";
 import thunk from "redux-thunk";
 import { batchedSubscribe } from "redux-batched-subscribe";
 import _ from "lodash"; 
-
 import todoSlice from "./Reducers/todoSlice";
 //  custom middleware
 const middleware1 = (store) => (next) => (action) => {

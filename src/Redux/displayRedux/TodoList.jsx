@@ -1,22 +1,33 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTodos } from '../Reducers/todoSlice';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+ export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
+    try {
+      const response = await axios.get('https://jsonplaceholder.typicode.com/todos?_page=1&_limit=10');
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  });
 
 function TodoList() {
   const dispatch = useDispatch();
   const { todos, loading, error } = useSelector((state) => state.todo);
 
   useEffect(() => {
-    dispatch(fetchTodos());
+    dispatch(fetchTodos())
   }, [dispatch]);
 
   return (
-    <div className="todo-list-container">
+
+   <div className='body2 d-flex  align-items-center '>
+     <div className="todo-list-container">
       <h1 className="todo-list-title">Todo List</h1>
       {loading === 'loading' && <div className="loading-text loading">Loading...</div>}
       {loading === 'failed' && <div className="error-text">Error: {error}</div>}
       {loading === 'succeeded' && (
-        <table className="todo-table table text-center">
+        <table className="todo-table  text-center">
           <thead>
             <tr >
               <th>ID</th>
@@ -36,6 +47,7 @@ function TodoList() {
         </table>
       )}
     </div>
+   </div>
   );
 }
 

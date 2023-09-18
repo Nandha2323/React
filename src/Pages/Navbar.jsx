@@ -185,7 +185,7 @@ export default function NavBar() {
                   <li>
                     <NavLink
                       className="nav-link text-center fw-bold "
-                      to="/table"
+                      to="/redux"
                     >
                       Basic
                     </NavLink>

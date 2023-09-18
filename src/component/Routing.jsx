@@ -25,20 +25,24 @@ import Query from "./Tanstack Query/Query";
 import GroupingData from "./Tanstack Query/GroupingData";
 import Pokemon from "../Redux/displayRedux/pokemon";
 import TodoList from "../Redux/displayRedux/TodoList";
+import { SignUp } from "../Pages/SignUp";
 
 
 function Routing() {
   const location = useLocation();
   // Check if the current location is "/login"
   const isLoginPage = location.pathname === "/login";
+  const isSignUpPage = location.pathname === "/signup";
   return (
     <div>
      
-     {!isLoginPage && <NavBar />}
+     {!isLoginPage && !isSignUpPage && <NavBar />}
       <Routes>
         {/* PUBLIC ROUTES */}
         <Route element={<Publicroutes />}>
+          <Route  path="/signup" element={<SignUp />} />  
           <Route  path="/login" element={<Login />} />
+         
         </Route>
       
         {/* PRIVATE ROUTES */}
