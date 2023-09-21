@@ -188,7 +188,7 @@ function Table() {
           />
         </div>
         {isLoading ? (
-          <div className="text-center loading">Loading...</div>
+          <div className="text-center spinner"></div>
         ) : isError ? (
           <div className="text-center error">Error loading data</div>
         ) : (

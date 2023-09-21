@@ -143,7 +143,7 @@ function Virtualize() {
       : 0;
 
   if (isLoading) {
-    return <>Loading...</>;
+    return <div className="text-center spinner"></div>;
   }
 
   return (

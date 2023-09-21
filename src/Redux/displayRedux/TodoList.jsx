@@ -24,7 +24,7 @@ function TodoList() {
    <div className='body2 d-flex  align-items-center '>
      <div className="todo-list-container">
       <h1 className="todo-list-title">Todo List</h1>
-      {loading === 'loading' && <div className="loading-text loading">Loading...</div>}
+      {loading === 'loading' && <div className='mt-5 spinner'></div>}
       {loading === 'failed' && <div className="error-text">Error: {error}</div>}
       {loading === 'succeeded' && (
         <table className="todo-table  text-center">

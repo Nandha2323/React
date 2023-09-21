@@ -1,15 +1,18 @@
 import React from "react";
-import Routing from "./component/Routing";
+import Routing from "./component/Router/Routing";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ErrorBoundary from "./component/ErrorBoundary/ErrorBoundary";
 
 const queryClient = new QueryClient();
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <div>
-        <Routing/>
-      </div>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <div>
+          <Routing />
+        </div>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }
 

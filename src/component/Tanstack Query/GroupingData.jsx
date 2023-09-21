@@ -160,8 +160,8 @@ function GroupingData() {
             {isLoading ? (
               <tbody className="m-5">
                 <tr>
-                  <td colSpan={columns.length} className="loading text-center">
-                    Loading...
+                  <td colSpan={columns.length} className="text-center">
+                    <div className="spinner"></div>
                   </td>
                 </tr>
               </tbody>

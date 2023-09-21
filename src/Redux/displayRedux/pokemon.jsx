@@ -13,7 +13,7 @@ import {useGetPokemonByNameQuery,useGetAllPokemonByNameQuery,useGetPokemonImageB
     {error ? (
       <>Oh no, there was an error</>
     ) : isLoading ? (
-      <h1>Loading...</h1>
+      <div className='mt-5 spinner'></div>
     ) : data ? (
       <>
         <div className='text-center'><br />
