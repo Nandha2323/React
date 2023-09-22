@@ -91,8 +91,7 @@ export const SignUp = () => {
 
             <button type="submit">Signup</button>
             <br />
-            <span className="text-center">or</span>
-            <br />
+            <span className="text-center">Already Signup ?</span>
             <NavLink to="/login">
               <button className="btn btn-primary w-100">Go To login</button>
             </NavLink>

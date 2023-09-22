@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
-export default function NavBar() {
+const NavBar = React.memo(() => {
   const navigate = useNavigate()
-  
+  console.log("RENDERED");
   const handleLogout = () => {
     // Clear authentication token from local storage
     localStorage.removeItem("token");
@@ -301,4 +301,5 @@ export default function NavBar() {
       </nav>
     </div>
   );
-}
+});
+export default NavBar;

@@ -92,8 +92,8 @@ function Login() {
             <button type="submit">Login</button>
           )}
           <br />
-          <span className="text-center">or</span>
-          <br />
+          <span className="text-center">New User ?</span>
+         
           <NavLink to="/signup">
             <button className="btn btn-primary w-100">Sign Up</button>
           </NavLink>

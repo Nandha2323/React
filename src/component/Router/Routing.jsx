@@ -30,6 +30,7 @@ import { SignUp } from "../../Pages/SignUp";
 
 function Routing() {
   const location = useLocation();
+  
   // Check if the current location is "/login"
   const isLoginPage = location.pathname === "/login";
   const isSignUpPage = location.pathname === "/signup";
@@ -37,6 +38,7 @@ function Routing() {
     <div>
      
      {!isLoginPage && !isSignUpPage && <NavBar />}
+     
       <Routes>
         {/* PUBLIC ROUTES */}
         <Route element={<Publicroutes />}>

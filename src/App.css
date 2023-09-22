@@ -265,12 +265,12 @@ button {
 
 /* useReducer */
 .white-theme {
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: rgb(255, 255, 255)!important;
+  color: black!important;
 }
 .dark-theme {
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: rgb(0, 0, 0)!important;
+  color: white!important;
 }
 
 
